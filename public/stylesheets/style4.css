@@ -1,0 +1,31 @@
+.TOP {
+    margin-top: 100px;
+}
+
+.p {
+
+    margin-left: 150px;
+    margin-right: 20px;
+}
+
+.pp {
+    margin-bottom: 50px;
+}
+
+.ppp {
+    color: white;
+    background-image: url('/images/bd.jpg');
+    background-size: 287px 303px;
+}
+
+.pppp {
+    color: white;
+    background-image: url('/images/hires1.jpg');
+    background-size: 287px 303px;
+}
+
+.ppppp {
+    color: white;
+    background-image: url('/images/announcement.jpg');
+    background-size: 287px 303px;
+}

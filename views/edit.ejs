@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Home</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet"  href="/stylesheets/style1.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Intern's Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item d">
+                <a class="nav-link active" aria-current="page" href="/home/<%= p %>">HOME</a>
+            </li>
+            <li class="nav-item d">
+                <a class="nav-link active" aria-current="page" href="/dsr/<%= p %>">DSR</a>
+            </li>
+            <li class="nav-item d">
+                <a class="nav-link active" href="/projects/<%= p%>">PROJECTS</a>
+            </li>
+            <li class="nav-item d">
+                  <a class="nav-link active" href="/edit/<%= p%>">EDIT</a>
+            </li>
+            <li class="nav-item d dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                  TRACK
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/task/<%= body1.EmailId %>">DSR</a></li>
+                    <li><a class="dropdown-item" href="/assignedwork/<%= p %>">TASK</a></a></li>
+                    <li><a class="dropdown-item" href="/approvecancel/<%= p %>">LEAVE</a></li>
+                    <li><a class="dropdown-item" href="/leave/<%= p %>">APPLY LEAVE</a></li>
+                    
+                </ul>
+
+            </li>
+
+          </ul>
+          <form class="d-flex" role="search">
+            <a href="/editfile/<%= body1.EmailId %>" class="btnn" style="font-size:20px;margin-top: 0px;">EDIT DOCUMENTS</a>
+          </form>
+        </div>
+      </div>
+</nav>
+    <div class="TOP">
+    <form method="post" action="">
+      <table>
+        <tr>
+            <td>
+            <div class="Table1">
+              <table class="table table-striped tab">
+                  <thead>
+                    <tr>
+                      <h2>Basic Info</h2>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><label class="form-check-label" >Name</label></td>
+                      <td><input type="text" name="N" value="<%= body1.Name %>" class="form-control" required ></td>
+                    </tr>
+                    <tr>
+                      <td><label class="form-check-label" >Employee Id</label></td>
+                      <td><input type="text" name="EID" class="form-control" value="<%= body1.EmployeeId %>" required></td>
+                    </tr>
+                    <tr>
+                      <td><label class="form-check-label" >Email</label></td>
+                      <td><input type="email" name="E" value="<%= body1.EmailId %>" class="form-control" required ></td>
+                    </tr>
+                    <tr>
+                      <td><label class="form-check-label" >Date Of Joining</label></td>
+                      <td><input type="date" name="DOJ" class="form-control" value="<%= body1.DateOfJoining %>" required></td>
+                    </tr>
+                    <tr>
+                      <td><label class="form-check-label" >Reporting To</label></td>
+                      <td><input type="text" name="RT" class="form-control" value="<%= body1.ReportingTO %>" required></td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+            </td>
+            <td>
+            <div class="Table2">
+              <table class="table table-striped tab">
+                  <thead>
+                    <tr>
+                      <h2>Personal Info</h2>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><label class="form-check-label" >Name</label></td>
+                      <td><input type="text"  value="<%= body2.Name %>" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                      <td><label class="form-check-label" >Mobile No</label></td>
+                      <td><input type="number" name="MN" class="form-control" value="<%= body2.MobileNo %>" required></td>
+                    </tr>
+                    <tr>
+                      <td><label class="form-check-label" >Personal Email</label></td>
+                      <td><input type="email" value="<%= body2.EmailId %>" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                      <td><label class="form-check-label" >Birth Date</label></td>
+                      <td><input type="date" name="DOB" value="<%= body2.BirthDate %>" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                      <td><label class="form-check-label" >Marital Status</label></td>
+                      <td><input type="text" name="MS" class="form-control" value="<%= body2.MaritalStatus %>"></td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+            </td>
+            <td>
+              <div class="Table3">
+                <table class="table table-striped tab">
+                    <thead>
+                      <tr>
+                        <h2>Work</h2>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><label class="form-check-label" >Department</label></td>
+                        <td><input type="text" name="D" class="form-control" value="<%= body3.Department %>" required></td>
+                      </tr>
+                      <tr>
+                        <td><label class="form-check-label" >Reporting To</label></td>
+                        <td><input type="text"  class="form-control" value="<%= body1.ReportingTO %>" required></td>
+                      </tr>
+                      <tr>
+                        <td><label class="form-check-label" >Location</label></td>
+                        <td><input type="text" name="L" class="form-control" value="<%= body3.Location %>"></td>
+                      </tr>
+                      <tr>
+                        <td><label class="form-check-label" >Designation</label></td>
+                        <td><input type="text" name="DG"  class="form-control" value="<%= body3.Designation %>" required></td>
+                      </tr>
+                      <tr>
+                        <td><label class="form-check-label" >Mode Of Work</label></td>
+                        <td><input type="text" name="MOW"  class="form-control" value="<%= body3.ModeOfWork %>" required></td>
+                      </tr>
+                      <tr>
+                        <td><label class="form-check-label" >Employee Status</label></td>
+                        <td><input type="text" name="ES"  class="form-control" value="<%= body3.EmployeeStatus %>" required></td>
+                      </tr>
+                      <tr>
+                        <td><label class="form-check-label" >Exiprience</label></td>
+                        <td><input type="text" name="EX"  class="form-control" value="<%= body3.Expirience %>" required></td>
+                      </tr>
+                      <tr>
+                        <td><label class="form-check-label" >Email</label></td>
+                        <td><input type="email"  value="<%= body3.EmailId %>" class="form-control" required></td>
+                      </tr>
+                    </tbody>
+                </table>
+                </div>
+            </td>
+        </tr>
+      </table>
+    </div>
+    <div class="Middle">
+        <div class="Table4">
+            <table class="table table-striped tab">
+                <thead>
+                  <tr>
+                    <h2>Education</h2>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><label class="form-check-label" >BTECH</label></td>
+                    <td><input type="text" name="BTECH"  class="form-control" value="<%= body1.BTECH %>" required></td>
+                  </tr>
+                  <tr>
+                    <td><label class="form-check-label" >HSC</label></td>
+                    <td><input type="text" name="HSC"  class="form-control" value="<%= body1.HSC %>" required></td>
+                  </tr>
+                  <tr>
+                    <td><label class="form-check-label" >SSC</label></td>
+                    <td><input type="text" name="SSC"  class="form-control" value="<%= body1.SSC %>" required></td>
+                  </tr>
+                </tbody>
+                </table>
+          </div>
+
+    </div>
+    <div class="Bottom">
+        <h2 class="k">Edit</h2>
+        <p class="p" style="line-space:2; padding-bottom:20px;">Click the below button to save the changes you made<br><B>NOTE</B>:- If you edit your email then you will be logged out form the system.</p>
+        
+        <button type="submit" class="btnn" style="font-size:20px;margin-top: 0px;">EDIT INFORMATION</button>
+
+    </div>
+</form>
+    <div class="bottom-container">
+          <div class="dd"><b>CCTech</b></div>
+    </div>
+</body>
+</html>

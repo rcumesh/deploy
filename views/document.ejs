@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel='stylesheet' href='/stylesheets/style3.css' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+   
+    
+
+
+
+    
+    <h1 style="margin-top: 20px;">
+        <p style="text-align: center;">Uploaded Documents
+        </p>
+    </h1>
+    <div class="MIDDLE">
+
+        <form method="post" enctype="multipart/form-data" >
+        <table class="table table-striped" style="border:rgb(84, 75, 75);">
+            <thead>
+                <tr>
+                    <td>
+                        <h4 style="color: gray;">Document</h4>
+                    </td>
+                    <td>
+                        <h4 style="color: gray;">Uploaded File</h4>
+                    </td>
+                    <td>
+                        <h4 style="color: gray;">Link</h4>
+                    </td>
+                    
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    <label class="form-label" for="customFile">Adhar Card</label>
+                </td>
+                <td>
+                    <label class="form-label" for="customFile"><%= data.Adharcard.slice(29,)%></label>
+                </td>
+                <td>
+                    <a href="<%= data.Adharcard.slice(6,)%>" >View</a></td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label" for="customFile">Pan Card</label>
+                </td>
+                <td>
+                    <label class="form-label" for="customFile"><%= data.Pancard.slice(29,)%></label>
+                </td>
+                <td>
+                    <a href="<%= data.Pancard.slice(6,)%>" >View</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label" for="customFile">Bankpass Book</label>
+                </td>
+                <td>
+                    <label class="form-label" for="customFile"><%= data.BankPassBook.slice(29,)%></label>
+                </td>
+                <td>
+                    <a href="<%=data.BankPassBook.slice(6,)%>" >View</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label" for="customFile">SSC Result</label>
+                </td>
+                <td>
+                    <label class="form-label" for="customFile"><%= data.Ssc.slice(29,)%></label>
+                </td>
+                <td>
+                    <a href="<%= data.Ssc.slice(6,)%>" >View</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label" for="customFile">HSC Result</label>
+                </td>
+                <td>
+                    <label class="form-label"  for="customFile"><%= data.Hsc.slice(29,)%></label>
+                </td>
+                <td>
+                    <a href="<%= data.Hsc.slice(6,)%>" >View</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label" for="customFile">Degree Result</label>
+                </td>
+                <td>
+                    <label class="form-label" for="customFile"><%= data.Degree.slice(29,)%></label>
+                </td>
+                <td>
+                    <a href="<%= data.Degree.slice(6,)%>" >View</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label" for="customFile">Resume</label>
+                </td>
+                <td>
+                    <label class="form-label" for="customFile"><%= data.Resume.slice(29,)%></label>
+                </td>
+                <td>
+                    <a href="<%= data.Resume.slice(6,)%>" >View</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label" for="customFile">Profile Image</label>
+                </td>
+                <td>
+                    <label class="form-label" for="customFile"><%= data.ProfileImg.slice(29,)%></label>
+                </td>
+                <td>
+                    <a href="<%= data.ProfileImg.slice(6,)%>" >View</a>    
+                </td>
+            </tr>
+            
+        </table>
+        
+        <button type="submit" class="btnn" >Approve</button>
+        <a href="/rejected/<%= data.EmailId %>" class="btnn"  >Reject</a>
+        
+    </form>
+    </div>
+
+
+
+
+</body>
+
+</html>
